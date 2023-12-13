@@ -1,0 +1,79 @@
+{
+  "name": "Celeste Flixel Remake",
+  "ogmoVersion": "3.4.0",
+  "levelPaths": ["."],
+  "backgroundColor": "#282c34ff",
+  "gridColor": "#3c4049cc",
+  "anglesRadians": true,
+  "directoryDepth": 5,
+  "layerGridDefaultSize": {"x": 12, "y": 12},
+  "levelDefaultSize": {"x": 320, "y": 240},
+  "levelMinSize": {"x": 128, "y": 128},
+  "levelMaxSize": {"x": 4096, "y": 4096},
+  "levelValues": [],
+  "defaultExportMode": ".json",
+  "compactExport": false,
+  "externalScript": "",
+  "playCommand": "",
+  "entityTags": [],
+  "layers": [
+    {
+      "definition": "tile",
+      "name": "Blocks",
+      "gridSize": {"x": 12, "y": 12},
+      "exportID": "43332652",
+      "exportMode": 0,
+      "arrayMode": 0,
+      "defaultTileset": "Default"
+    },
+    {
+      "definition": "entity",
+      "name": "Entities",
+      "gridSize": {"x": 12, "y": 12},
+      "exportID": "43336265",
+      "requiredTags": [],
+      "excludedTags": []
+    }
+  ],
+  "entities": [
+    {
+      "exportID": "43331703",
+      "name": "Player",
+      "limit": -1,
+      "size": {"x": 8, "y": 18},
+      "origin": {"x": -2, "y": -6},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#00f1ffff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 12, "y": 24},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": [],
+      "values": []
+    }
+  ],
+  "tilesets": [
+    {"label": "Default", "path": "../images/tileMap.png", "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAAvlJREFUaIHtWllygzAMlTO9THKbpudMeprS21T9AIO8yEiySOmM30wCGC+StViWCWAEIqK1rQdCCMHS7mJphD9OzBp7QbBPuHqWjpAsWghZoJW0ScIRXpxbmbWgi2FK6O0JALhcAeD2IOXLFbNny7UXNpXOdJAnhlbkFFen0NM9fT5cpRGgwiyn3IG5ZzrbQc6sBWqGc/Km91qpsbMdlJqk9yJv6hY5EZ9x4ADTfSPg9vR3RaWE9WN0Oa2NCG5gbDy169PJi/BwXN0Mt4mgE4ECeYRYtaohiYRx/VPBJfDwWjIAqM+ue+9eL/2WM1Ajvj70XOrJLCTj7DNrQaLSyHQakhpp6Vz/NfuIGMz0IGE4gMYmFyKe9XK5jWFyaWH6sPSfImH4alBPVs3C+rdDl8wEaVha9K/AhcaqlpUztm9OuKRjQR03G+5xPHOkhdYJL4CVu9i1uw1XxtmKGOnNkZZXVIVtL/2Rl3TaMDNOU3oaNev15aUmdoWWNnI05iCOtCgIWc7rsE0tPYgoUC73APAvYmkKhQaJzcfDhiWQqFlBi3y95eBuw+L5Uqyrilgr6/qYcDWx4Z7Ag4M95njB5kELutmoy8MupemO6y/iUKfVJHV5STcbUR5ppsI3zXOghHeyE+RlTkRvLqvptBxCSyaJJyH62ARANcVThJZ62FQaANIEQB+Quc9xqA0X+ecGY/Gd9fpNnoOgfg/C9VEeneT4ulvdT8+5oAy2o5ZGk4llVrLkaJk9PjfWXIerCb11Rv0kt7G502c2H5avAJoMc06iNhAfeHA/0t8+nUVF6ycPZFmSHG32D/jXIAyXR5se27GjcX3oPsGYVZrLV1GVVp7lvgrcGs7Nwq6XXpk+H68AsJBFYvukvALRbsn7Owt3yE5rAQDl28PTMttCMRGhP6f1vyCU8Pl8c4q9E0wa2IgYpo7hbNg2Fqn+cmkIuUqf1EtT0LiBCwUvOsGdVMwErHovM6B0WicVM+GPPaAfGBgYGBgYGBgYGOjCL+otA0sMVdgaAAAAAElFTkSuQmCC", "tileWidth": 12, "tileHeight": 12, "tileSeparationX": 0, "tileSeparationY": 0, "tileMarginX": 0, "tileMarginY": 0}
+  ]
+}
