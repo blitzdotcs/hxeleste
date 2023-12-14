@@ -25,9 +25,14 @@ class PlayState extends FlxState
 	var tileMap:FlxTilemap;
 	public static var LEVEL:Int = 1;
 	var walls:FlxTilemap;
+	var maincam:FlxCamera;
 
 	override public function create()
 	{
+		maincam = new FlxCamera(0, 0, FlxG.width, FlxG.height);
+        FlxG.cameras.add(maincam);
+        FlxCamera.defaultCameras = [maincam];
+
 		var level:LevelData = Json.parse(Assets.getText(Paths.getGSLevel(LEVEL)));
 
 		map = new FlxOgmo3Loader(Paths.getGSOgmoData(), Paths.getGSMap(level.map));
@@ -45,7 +50,8 @@ class PlayState extends FlxState
 		add(player);
 
 		// preparar el juego
-		FlxG.camera.follow(player, PLATFORMER, 1);
+        maincam.follow(player, FlxCameraFollowStyle.LOCKON);
+        maincam.zoom = 2.5;
 
 		super.create();
 	}
