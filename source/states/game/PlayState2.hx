@@ -4,7 +4,6 @@ package states.game;
 import flixel.FlxState;
 import game.Madeline;
 import flixel.addons.editors.ogmo.FlxOgmo3Loader;
-import backend.AssetPaths;
 import flixel.tile.FlxTilemap;
 import flixel.FlxG;
 import backend.Paths;

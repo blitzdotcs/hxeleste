@@ -31,7 +31,8 @@ class Madeline extends Chars
 		super(x, y);
 		canMove = !kinematic;
 
-		setSize(8, 8);
+		setSize(8, 18);
+		offset.set(2, 6);
 
 		if (canMove)
 		{
