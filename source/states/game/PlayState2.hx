@@ -1,3 +1,4 @@
+// this ver of playstate just removes the level shit and just adds madeline
 package states.game;
 
 import flixel.FlxState;
@@ -7,18 +8,19 @@ import backend.AssetPaths;
 import flixel.tile.FlxTilemap;
 import flixel.FlxG;
 import backend.Paths;
+import backend.OldPaths;
 import haxe.Json;
 import flixel.FlxObject;
 import flixel.FlxCamera;
 import flixel.FlxSprite;
 
-typedef LevelData =
+typedef LevelDataq =
 {
 	var map:String;
 	var player:String;
 }
 
-class PlayState extends FlxState
+class PlayState2 extends FlxState
 {
 	public static var player:Madeline;
 	var map:FlxOgmo3Loader;
@@ -29,24 +31,15 @@ class PlayState extends FlxState
 
 	override public function create()
 	{
+		var jokebg:FlxSprite;
+		jokebg = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07).loadGraphic(OldPaths.image('testbg'));
+		add(jokebg);
+
 		maincam = new FlxCamera(0, 0, FlxG.width, FlxG.height);
         FlxG.cameras.add(maincam);
         FlxCamera.defaultCameras = [maincam];
-		
-		var level:LevelData = Json.parse((Paths.getLevelUno()));
 
-		map = new FlxOgmo3Loader(Paths.getOgmoData(), Paths.getMapUno());
-		tileMap = map.loadTilemap(Paths.getImage("tileMap"), "Blocks");
-		add(tileMap);
-
-		walls = map.loadTilemap(Paths.getImage("tileMap"), "Blocks");
-		walls.follow();
-		walls.setTileProperties(0, FlxObject.NONE);
-		walls.setTileProperties(1, FlxObject.ANY);
-		add(walls);
-
-		player = new Madeline();
-		map.loadEntities(placeEntities, "Entities");
+		player = new Madeline(0, 0);
 		add(player);
 
 		maincam.follow(player, FlxCameraFollowStyle.LOCKON);
@@ -55,17 +48,8 @@ class PlayState extends FlxState
 		super.create();
 	}
 
-	function placeEntities(entity:EntityData)
-	{
-		if (entity.name == "player")
-		{
-			player.setPosition(entity.x, entity.y);
-		}
-	}
-
 	override public function update(elapsed:Float)
 	{
         super.update(elapsed);
-		FlxG.collide(player, walls);
 	}
 }

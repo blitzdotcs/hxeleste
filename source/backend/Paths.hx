@@ -87,7 +87,12 @@ class Paths
 
 	static public function getLevelUno()
 	{
-		return 'assets/data/levels/leveldebug.json';
+		return 'assets/data/levels/level1.json';
+	}
+
+	static public function getMapUno()
+	{
+		return 'assets/data/maps/level1remake.json';
 	}
 
 	inline static public function image(key:String, ?library:String)
