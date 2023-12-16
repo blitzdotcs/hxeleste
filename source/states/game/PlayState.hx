@@ -26,6 +26,7 @@ class PlayState extends FlxState
 	public static var LEVEL:Int = 1;
 	var walls:FlxTilemap;
 	var maincam:FlxCamera;
+	public static var pixelzoomshit:Float = 0.6;
 
 	override public function create()
 	{
@@ -45,7 +46,7 @@ class PlayState extends FlxState
 		walls.setTileProperties(1, FlxObject.ANY);
 		add(walls);
 
-		player = new Madeline();
+		player = new Madeline(0, 0);
 		map.loadEntities(placeEntities, "Entities");
 		add(player);
 

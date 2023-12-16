@@ -34,6 +34,8 @@ class Chars extends FlxSprite
 				frames = tex;
 			    animation.addByPrefix('norm', "idle0", 6);
                 playAnim('norm');
+				antialiasing = false;
+				setGraphicSize(Std.int(width * states.game.PlayState.pixelzoomshit));
             }    
 		}
 	}

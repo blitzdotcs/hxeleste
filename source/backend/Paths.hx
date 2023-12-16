@@ -103,16 +103,16 @@ class Paths
 	// EDITED GRAPE SODA
 	static public function getGSLevel(number:Int)
 	{
-		return 'assets/flxgrapesoda/levels/level$number.json';
+		return 'assets/data/levels/level$number.json';
 	}
 	
 	static public function getGSMap(file:String)
 	{
-		return 'assets/flxgrapesoda/maps/$file.json';
+		return 'assets/data/maps/$file.json';
 	}
 	
 	static public function getGSOgmoData()
 	{
-		return 'assets/flxgrapesoda/$OGMO_DATA.ogmo';
+		return 'assets/data/$OGMO_DATA.ogmo';
 	}
 }
